@@ -1,6 +1,11 @@
 // Q3 Insert node in Linked list
 // Link : https://www.geeksforgeeks.org/linked-list-set-2-inserting-a-node/
 
+// In this post, methods to insert a new node in linked list are discussed. A node can be added in three ways 
+// 1) At the front of the linked list 
+// 2) After a given node. 
+// 3) At the end of the linked list.
+
 
 public class Singlylinked {
 
@@ -45,6 +50,41 @@ public class Singlylinked {
         
     }
 
+    public  boolean checkIfExist(int datatocheck){
+        Node temp = head;
+        while (temp != null) {
+            if(temp.data == datatocheck){
+                return true;
+                
+            }
+            else{
+                temp = temp.next;
+            }
+            
+        }
+        return false;
+        
+    }
+
+
+    public  void addAfterParticualarNode(int data , int afterThis) {
+        System.out.println("Data to add after this is  " + data + "  after This is  " + afterThis);
+         if((checkIfExist(afterThis))==true){
+             System.out.print("Data exist              \n"); 
+                Node newNode = new Node(data);
+                Node temp = head;
+                while(temp.data != afterThis){
+                    temp = temp.next;
+                }
+                newNode.next = temp.next;
+                temp.next = newNode;
+                
+         }
+         else{
+             System.out.println("Not exist");
+         }
+    }    
+
 
 
     public void display() {
@@ -86,6 +126,7 @@ public class Singlylinked {
 
         
         sl.addAtLast(1330);
+        sl.addAfterParticualarNode(111111,87);
         sl.display();
 
 
