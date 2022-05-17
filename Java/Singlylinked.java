@@ -26,6 +26,16 @@ public class Singlylinked {
         }
          System.out.println( "null" );
     }
+    public void findLength(){
+                Node temp = head;
+                int count=0;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        System.out.println("Length of the linked list is "+count);
+    }
+    
 
 
     public static void main(String[] args) {
@@ -43,6 +53,7 @@ public class Singlylinked {
         fifth.next = null;
 
         sl.display();
+        sl.findLength();
 
         // System.out.println( "Hello World!" );
     }
