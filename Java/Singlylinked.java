@@ -1,8 +1,7 @@
+// Q3 Insert node in Linked list
+// Link : https://www.geeksforgeeks.org/linked-list-set-2-inserting-a-node/
 
 
-/**
- * Singlylinked
- */
 public class Singlylinked {
 
 

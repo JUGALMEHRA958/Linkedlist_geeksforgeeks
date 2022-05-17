@@ -1,3 +1,6 @@
+// Q3 Insert node in Linked list
+// Link : https://www.geeksforgeeks.org/linked-list-set-2-inserting-a-node/
+
 var head;
 
 class Node {
